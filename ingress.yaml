@@ -11,7 +11,7 @@ spec:
   - host: hello.apps.os-test.novalocal
     http:
       paths:
-      - path: /hello-world
+      - path: /
         backend:
           serviceName: nginx-demo
           servicePort: 80
