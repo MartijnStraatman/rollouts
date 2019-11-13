@@ -8,10 +8,10 @@ metadata:
     ingress.kubernetes.io/app-root: "/"
 spec:
   rules:
-  - host: nginx.apps.os-test.novalocal
+  - host: hello.apps.os-test.novalocal
     http:
       paths:
-      - path: /
+      - path: /hello-world
         backend:
           serviceName: nginx-demo
           servicePort: 80
