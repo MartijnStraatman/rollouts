@@ -2,22 +2,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: nginx-demo
+  name: hello-demo
   labels:
-    app: nginx-demo
+    app: hello-demo
 spec:
   replicas: 10
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: nginx-demo
+      app: hello-demo
   template:
     metadata:
       labels:
-        app: nginx-demo
+        app: hello-demo
     spec:
       containers:
-        - name: nginx-demo
+        - name: hello-demo
           image: "martijnvantiel/helloworld:latest"
           ports:
             - name: http
