@@ -8,7 +8,7 @@ metadata:
     ingress.kubernetes.io/app-root: "/"
 spec:
   rules:
-  - host:  nginx.apps.os-test.novalocal
+  - host: nginx.apps.os-test.novalocal
     http:
       paths:
       - path: /
