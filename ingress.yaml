@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nginx-demo
+  annotations:
+    ingress.kubernetes.io/proxy-body-size: 100M
+    kubernetes.io/ingress.class: "nginx"
+    ingress.kubernetes.io/app-root: "/"
+spec:
+  rules:
+  - host:  nginx.apps.os-test.novalocal
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: nginx-demo
+          servicePort: 80
